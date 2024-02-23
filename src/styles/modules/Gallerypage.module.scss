@@ -1,0 +1,10 @@
+.Image {
+  &Container {
+    display: flex;
+    place-content: center;
+    padding: 30dvh 0;
+  }
+  &File {
+    max-width: fit-content;
+  }
+}

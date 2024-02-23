@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.Contact {
+  //   color: #606060;
+  //   opacity: 0.5;
+
+  &Title {
+    font-size: 50px;
+    line-height: 1rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 5rem 0;
+  }
+  &Container {
+    &Entire {
+      //   background-color: violet;
+      justify-content: space-around;
+    }
+    &Section {
+      &1 {
+        // background-color: red;
+        max-width: fit-content;
+      }
+      &2 {
+        max-width: fit-content;
+        // background-color: yellow;
+        // justify-content: center;
+      }
+    }
+  }
+  &Icon {
+    width: 80px;
+    height: 80px;
+    &Container {
+      //   background-color: pink;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+  }
+  &Text {
+    margin-bottom: 2rem;
+    text-align: center;
+    // background-color: orange;
+    display: inline-block;
+    font-size: 1.25rem;
+    color: gray;
+  }
+}
+.Gmap {
+  &Container {
+    // background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  &File {
+    // background-color: #fff;
+    width: 50dvw;
+    height: 80dvh;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+      0 3px 10px 0 rgba(0, 0, 0, 0.106);
+  }
+}

@@ -1,0 +1,26 @@
+@import "../utils/mixins.scss";
+* {
+  margin: 0;
+  padding: 0;
+}
+.card {
+  // background-color: green;
+  margin-right: 0.5rem;
+  margin-top: 1.25rem;
+  &Title {
+    // background-color: purple;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    border-bottom: 3px solid #fee33d;
+    padding-bottom: 0.5rem;
+    font-size: 1.75rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  display: inline-block;
+  margin-bottom: 1.5rem;
+
+  @include md {
+    margin-bottom: 0;
+  }
+}

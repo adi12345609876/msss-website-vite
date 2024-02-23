@@ -1,0 +1,29 @@
+@import "../utils/mixins.scss";
+
+.footer {
+  // background-color: #fcf1d5;
+  // display: flex;
+  // bottom: 0;
+  // padding: 0.5rem 0;
+  &logo {
+    max-width: 7rem;
+    margin: 0 auto;
+    // position: relative;
+  }
+  &fullrow {
+    position: relative;
+    background-color: #fcf1d5;
+    width: 100dvw;
+  }
+  &credits {
+    color: rgba(54, 69, 79, 0.607);
+    position: absolute;
+    font-size: small;
+    bottom: 0.2dvw;
+    right: 1.5dvw;
+
+    // z-index: 1;
+    // bottom: 100px;
+    // right: 100px;
+  }
+}

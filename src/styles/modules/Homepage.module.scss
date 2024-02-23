@@ -1,0 +1,170 @@
+@import "../utils/mixins.scss";
+@import "..//utils/variables";
+// !Change the relative position of sleft side display to stop it from crumblee upon others
+
+.divider {
+  margin: 1rem 0;
+}
+.hero {
+  &ImageContainer {
+    background-color: black;
+  }
+  &Image {
+    opacity: 0.7;
+    transition: opacity 500ms ease 0s;
+  }
+}
+.display {
+  &div {
+    background-color: green;
+  }
+  &fullrow {
+    background-color: yellow;
+    // position: absolute ;
+
+    // padding: 10rem;
+    // width: 100dvw;
+    // height: 80dvh;
+  }
+  // Left side banner
+  &banner {
+    background-color: red;
+
+    // opacity: 0.2;
+    // position: absolute;
+    // left: 5dvw;
+    // padding-top: 60px;
+    // top: 5dvh;
+    // width: max-content;
+    // display: inline-block;
+    // float: left;
+
+    // padding-top: 0.5rem;
+  }
+}
+
+.banner {
+  &Image {
+    border-radius: 0.5rem;
+
+    @include xl {
+      // max-width: 20rem;
+    }
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+      0 3px 10px 0 rgba(0, 0, 0, 0.106);
+    margin-bottom: 0.5rem;
+  }
+}
+.Card {
+  &p {
+    font-size: 0.875rem /* 14px */;
+    line-height: 1.25rem /* 20px */;
+    margin-top: 0.75rem /* 12px */;
+    padding-left: 0.5rem /* 8px */;
+    padding-right: 0.5rem /* 8px */;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    border-radius: 0.25rem /* 4px */;
+    color: white;
+    display: inline-block;
+    background-color: rgb(51 65 85);
+  }
+  &img {
+    border-radius: 0.5rem /* 4px */;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+      0 3px 10px 0 rgba(0, 0, 0, 0.106);
+    margin-top: 0.75rem;
+    width: 100%;
+    height: auto;
+  }
+
+  &HiddenText {
+    border-radius: 0.5rem /* 4px */;
+    text-align: center;
+    display: flex;
+    // justify-content: center;
+    color: aliceblue;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    // height: 80%;
+    top: 70px;
+    // bottom: 70px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+    transition: 0.5s ease;
+    h1 {
+      width: 100%;
+      margin-top: 10%;
+      font-size: 4vw;
+      position: absolute;
+      // transform: rotate(-5deg) skewX(-5deg);
+    }
+    h2 {
+      font-size: 1.2vw;
+      margin: 30% 0 0 15%;
+      width: 70%;
+      // letter-spacing: 5px;
+      // line-height: 1.5em;
+    }
+  }
+  &Container {
+    // background-color: aqua;
+    position: relative;
+    &:hover .CardHiddenText {
+      height: 80%;
+    }
+  }
+}
+
+.Content {
+  &Container {
+    // background-color: red;
+    align-items: center;
+    // margin-top: 20dvh;
+    padding: 15dvh 0;
+  }
+  &Text {
+    &Container {
+      // background-color: yellow;
+      margin-right: 10dvw;
+      // margin-left: 10dvw;
+      margin-left: 10dvw;
+      max-width: 30dvw;
+    }
+    &Title {
+      // background-color: indigo;
+      font-size: 10vh;
+      margin-bottom: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    &Para {
+      // background-color: green;
+    }
+  }
+  &Image {
+    &Container {
+      // background-color: blue;
+      max-width: max-content;
+      // display: inline-block;
+    }
+    &File {
+      // background-color: pink;
+      // width: fit-content;
+      // margin-left: 10dvh;
+      border-radius: 0.25rem;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  }
+  &Reverse {
+    // background-color: black;
+    // margin-right: 25dvw;
+    margin-left: 3dvw;
+
+    flex-direction: row-reverse;
+  }
+  &Noreverse {
+  }
+}
