@@ -9,7 +9,8 @@ Currently, two official plugins are available:
   Snippets
   rfce
   imr
-  <!-- Todo -->
-  <!-- 1. Chose a color panel and color the page (distinguis the navbar and the routes and the footer using it) -->
-  <!-- 2. Show text on hover over the news & show description text for the gallery photos-->
-  <!-- 3. change to dynamic position relative to mobile phone too -->
+    <!-- Todo -->
+    <!-- 1. Chose a color panel and color the page (distinguis the navbar and the routes and the footer using it) -->
+    <!-- 2. Show text on hover over the news & show description text for the gallery photos-->
+    <!-- 3. change to dynamic position relative to mobile phone too -->
+  npm i react-router-dom@6.22.0

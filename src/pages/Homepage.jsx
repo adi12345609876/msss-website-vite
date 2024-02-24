@@ -1,14 +1,10 @@
-import React, { forwardRef, useRef } from "react";
-import { Image, Container, Row, Col } from "react-bootstrap";
+import React, { forwardRef } from "react";
+import { Image, Col, Button } from "react-bootstrap";
 import heroimg from "../assets/img/hero.jpeg";
-import b1 from "../assets/img/b1.png";
-import b2 from "../assets/img/b2.jpg";
-import b3 from "../assets/img/b3.jpg";
-import card1 from "../assets/img/card1.jpg";
-import card2 from "../assets/img/card2.jpg";
+
 import Card from "../components/card";
 import Homestyles from "../styles/modules/Homepage.module.scss";
-import { Divider } from "../components/minicomponents";
+
 import ContentData from "../data/Home-ContentBloack";
 
 // import { news, aboutus, mission } from "../components/Globalcomp";
@@ -37,38 +33,36 @@ function Imageblock(props) {
     </div>
   );
 }
+
 function Contentblock({ props }) {
   // const imgurl = "../".concat(props.img);
 
   return (
-    <div className={`${props.i % 2 == 0 ? "bg-[#edf2fb]" : "bg-white"}`}>
-      <Container fluid key={props.id}>
-        <Row
-          className={`${Homestyles.ContentContainer} ${
-            props.rev ? Homestyles.ContentReverse : Homestyles.ContentNoreverse
+    <div
+      className={`${props.i % 2 == 0 ? "bg-[#edf2fb]" : "bg-white"}`}
+      key={props.id}
+    >
+      <div
+        className={`${Homestyles.ContentContainer} ${
+          props.rev ? Homestyles.ContentReverse : Homestyles.ContentNoreverse
+        }`}
+      >
+        {/* Text */}
+        <Col
+          className={`${Homestyles.ContentTextContainer} ${
+            props.rev ? "" : ""
           }`}
         >
-          {/* Text */}
-          <Col
-            className={`${Homestyles.ContentTextContainer} ${
-              props.rev ? "mr-96" : ""
-            }`}
-          >
-            <h1 className={Homestyles.ContentTextTitle}>{props.title}</h1>
-            <p className={Homestyles.ContentTextPara}>{props.para}</p>
-          </Col>
-          {/* Img */}
-          <Col className={Homestyles.ContentImageContainer}>
-            <img
-              src={props.img}
-              className={`${Homestyles.ContentImageFile} ${
-                props.rev ? "ml-[10dvh]" : ""
-              }`}
-            />
-          </Col>
-        </Row>
-      </Container>
-      <Divider />
+          <h1 className={Homestyles.ContentTextTitle}>{props.title}</h1>
+          <p className={Homestyles.ContentTextPara}>{props.para}</p>
+        </Col>
+        {/* Img */}
+        <Col className={Homestyles.ContentImageContainer}>
+          <img src={props.img} className={`${Homestyles.ContentImageFile}`} />
+        </Col>
+      </div>
+
+      {/* <Divider /> */}
     </div>
   );
 }
@@ -82,54 +76,60 @@ function Homepage({}, ref) {
       {/* Hero section */}
       <div className={Homestyles.heroImageContainer}>
         <Image
-          className={`${Homestyles.heroImage} shadow`}
+          className={`${Homestyles.heroImage}`}
           src={heroimg}
           alt="Modern school"
         />
+        <div className={`${Homestyles.heroTextContainer}`}>
+          <p className={`${Homestyles.heroSubText}`}>Welcome to</p>
+          <p className={`${Homestyles.heroText}`}>
+            Modern Senior Secondary School
+          </p>
+        </div>
+        <Button
+          href="/Admissions"
+          variant="primary"
+          size="lg"
+          className={Homestyles.herobutton}
+        >
+          Enroll Now
+        </Button>
       </div>
       {/*Display section */}
       <div className={Homestyles.displaydiv} ref={ref[0]}>
-        <Container className={Homestyles.displaycontainer}>
-          <Row className={Homestyles.displayfullrow}>
-            {/* Left side banner */}
-            <Col className={`${Homestyles.displaybanner}`}>
-              <Bannerimg img={b2} />
-              <Bannerimg img={b1} />
-              <Bannerimg img={b3} />
-            </Col>
-            {/* right side banner */}
+        <div className={Homestyles.displayfullrow}>
+          {/* Left side banner */}
+          <div className={`${Homestyles.displaybanner}`}>
+            {ContentData &&
+              ContentData[2].map((img) => {
+                return <Bannerimg img={img} />;
+              })}
+          </div>
+          {/* right side banner */}
 
-            {/* News column */}
-            <Col>
-              {/* <div className="w-10 h-10 bg-cyan-300"></div> */}
-              <Imageblock
-                img={card1}
-                hidheading="News 1"
-                hidtext="We have built a new canteen to feed young anime fans"
-                text="new canteen"
-                title="News"
-              />
-            </Col>
-            {/* <div className="w-10 h-10 bg-cyan-300"></div> */}
-
-            {/* Athletics column */}
-            <Col>
-              <Imageblock
-                hidheading="News 2"
-                hidtext="Our playground are open for all kids to play"
-                img={card2}
-                text="new playground"
-                title="Athletics"
-              />
-            </Col>
-          </Row>
-        </Container>
+          <div className={`${Homestyles.displayheadline}`}>
+            {ContentData &&
+              ContentData[1].map((item) => {
+                return (
+                  <div className="m-2">
+                    <Imageblock
+                      img={item.img}
+                      title={item.title}
+                      text={item.subtext}
+                      hidheading={item.hidheading}
+                      hidtext={item.hidtext}
+                    />
+                  </div>
+                );
+              })}
+          </div>
+        </div>
       </div>
 
       {/* Content section */}
 
       {ContentData &&
-        ContentData.toReversed().map((item) => {
+        ContentData[0].toReversed().map((item) => {
           return (
             <div ref={ref[1]}>
               <Contentblock props={item} />

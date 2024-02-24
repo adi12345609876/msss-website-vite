@@ -1,7 +1,6 @@
 @import "../utils/mixins.scss";
 
 .footer {
-  // background-color: #fcf1d5;
   // display: flex;
   // bottom: 0;
   // padding: 0.5rem 0;
@@ -18,7 +17,7 @@
   &credits {
     color: rgba(54, 69, 79, 0.607);
     position: absolute;
-    font-size: small;
+    font-size: 0.75rem;
     bottom: 0.2dvw;
     right: 1.5dvw;
 

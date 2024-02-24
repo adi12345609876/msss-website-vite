@@ -16,11 +16,11 @@ function App() {
   const aboutus = useRef(null);
 
   return (
-    <div className="container-fullwidth">
+    <div className="">
       {/* Navbar */}
       <AppNavbar ref={[news, aboutus]} />
       {/* ROUTES - the actual page/content */}
-      <>
+      <div className="bg-slate-50">
         <Routes>
           <Route path="/" element={<Homepage ref={[news, aboutus]} />} />
           <Route path="/Gallery" element={<Gallerypage />} />
@@ -28,7 +28,7 @@ function App() {
           <Route path="/Admissions" element={<AdmissionPage />} />
           <Route path="/Contact" element={<Contactpage />} />
         </Routes>
-      </>
+      </div>
       {/* Footer */}
       <div className={appstyle.divfooter}>
         <AppFooter />

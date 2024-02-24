@@ -1,19 +1,38 @@
 [
-  {
-    "i": 1,
-    "id": "Aboutuspage",
-    "title": "About us",
-    "para": "Modern Senior Secondary School founded in the year 1969, has been affiliated to theCentral Board of Secondary Education, New Delhi since 1977.It is managed by MIES. The MIES, Modern Indian Educational Society was formedand registered in the year 1974    under the Societies Registration Act,1860 (Act #XXI of 1860). The core objective of this society is to Manage, Improve and Develop Modern Senior Secondary School, A.G.s office colony, Nanganallur. Our School has got Provisional Affiliation up to 31.3.2019. The School providesits students with vibrant education programme and strives to provide anacademically challenging environment in order to foster intellectual curiosityand sense of responsibility in our students. The School has the best learning environment with excellent physical infrastructure and top human capital. Our dedicated teachers inspire our students to achieve the highest possible academic standards while focusing on the needs of the individual.",
-    "img": "images/card1.jpg",
-    "ref": "aboutus"
-  },
-  {
-    "i": 2,
-    "id": "Ourmissionpage",
-    "title": "Our Mission",
-    "para": "Apart from aiming Academic Excellence, our School focuses on Activity Based Learning in all subjects integrated with Values and also setting up Classroom Libraries in a Phased Manner for enhancing Reading Habits on Moral, Cultural and Spiritual Values of students to achieve the VISION of the school on Continual Basis.",
-    "img": "images/card2.jpg",
-    "rev": true,
-    "ref": "mission"
-  }
+  [
+    {
+      "i": 1,
+      "id": "Aboutuspage",
+      "title": "About us",
+      "para": "Modern Senior Secondary School founded in the year 1969, has been affiliated to theCentral Board of Secondary Education, New Delhi since 1977.It is managed by MIES. The MIES, Modern Indian Educational Society was formedand registered in the year 1974    under the Societies Registration Act,1860 (Act #XXI of 1860). The core objective of this society is to Manage, Improve and Develop Modern Senior Secondary School, A.G.s office colony, Nanganallur. Our School has got Provisional Affiliation up to 31.3.2019. The School providesits students with vibrant education programme and strives to provide anacademically challenging environment in order to foster intellectual curiosityand sense of responsibility in our students. The School has the best learning environment with excellent physical infrastructure and top human capital. Our dedicated teachers inspire our students to achieve the highest possible academic standards while focusing on the needs of the individual.",
+      "img": "images/card1.jpeg",
+      "ref": "aboutus"
+    },
+    {
+      "i": 2,
+      "id": "Ourmissionpage",
+      "title": "Our Mission",
+      "para": "Apart from aiming Academic Excellence, our School focuses on Activity Based Learning in all subjects integrated with Values and also setting up Classroom Libraries in a Phased Manner for enhancing Reading Habits on Moral, Cultural and Spiritual Values of students to achieve the VISION of the school on Continual Basis.",
+      "img": "images/card2.jpeg",
+      "rev": true,
+      "ref": "mission"
+    }
+  ],
+  [
+    {
+      "img": "images/card1.jpeg",
+      "hidheading": "Republic day",
+      "hidtext": "We had a nice republic day celebration,with our ncc and scout studets along with the yoga celebrations",
+      "subtext": "Republic day",
+      "title": "Festival"
+    },
+    {
+      "img": "images/card2.jpeg",
+      "hidheading": "Cricket tournament",
+      "hidtext": "our school student won 2023 chakra cricket match representing our school,They held 4th place in it",
+      "subtext": "victory",
+      "title": "Achievements"
+    }
+  ],
+  ["images/b1.jpg", "images/b2.png"]
 ]
