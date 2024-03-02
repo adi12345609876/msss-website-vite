@@ -19,3 +19,4 @@ Currently, two official plugins are available:
 
 npm install @mui/material @emotion/react @emotion/styled
 npm install --save react-google-recaptcha
+npm install lucide-react

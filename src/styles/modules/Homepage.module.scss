@@ -242,3 +242,27 @@
     flex-direction: row-reverse;
   }
 }
+.notify {
+  &Button {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    right: 3rem;
+    bottom: 3rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3rem;
+
+    background-color: map-get($ThemeC, "BlueShades", "2");
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+      0 3px 10px 0 rgba(0, 0, 0, 0.106);
+    transition: all 0.5s;
+    &:hover {
+      color: #e48792;
+      box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.2),
+        0 3px 10px 0 rgba(0, 0, 0, 0.106);
+    }
+  }
+}

@@ -1,12 +1,12 @@
-import React, { forwardRef } from "react";
-import { Image, Col, Button } from "react-bootstrap";
+import React, { forwardRef, useState } from "react";
+import { Image, Col, Button, Modal } from "react-bootstrap";
 import heroimg from "../assets/img/hero.jpeg";
 
 import Card from "../components/card";
 import Homestyles from "../styles/modules/Homepage.module.scss";
 
 import ContentData from "../data/Home-ContentBloack.json";
-import { useNavigate } from "react-router-dom";
+import { BellDot } from "lucide-react";
 
 // import { news, aboutus, mission } from "../components/Globalcomp";
 
@@ -20,7 +20,37 @@ function Imageblock(props) {
     </div>
   );
 }
-
+function MyVerticallyCenteredModal(props) {
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">Updates</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        {ContentData &&
+          ContentData[3].map((item, index) => {
+            return (
+              <>
+                <p>
+                  {index + 1}.{item.updatesText}
+                </p>
+              </>
+            );
+          })}
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={props.onHide} variant="danger" className=" bg-red-500">
+          Close
+        </Button>
+      </Modal.Footer>
+    </Modal>
+  );
+}
 function Contentblock({ props }) {
   // const imgurl = "../".concat(props.img);
 
@@ -54,10 +84,8 @@ function Contentblock({ props }) {
   );
 }
 function Homepage({}, ref) {
-  // const news = useRef(null);
-  // const aboutus = useRef(null);
-  // const mission = useRef(null);
-
+  const [showModal, setshowModal] = useState(false);
+  console.log(showModal);
   return (
     <>
       {/* Hero section */}
@@ -99,22 +127,7 @@ function Homepage({}, ref) {
             );
           })}
       </div>
-      {/* Updates */}
-      {/* <div className="flex items-center justify-center">
-        <div className={Homestyles.UpdatesContainer}>
-          <h1 className={Homestyles.UpdatesHeading}>Updates</h1>
-          {ContentData &&
-            ContentData[3].map((item, index) => {
-              return (
-                <div>
-                  <p className={Homestyles.UpdatesText}>
-                    {index + 1}.{item.updatesText}
-                  </p>
-                </div>
-              );
-            })}
-        </div>
-      </div> */}
+
       {/* Content section */}
 
       {ContentData &&
@@ -125,6 +138,16 @@ function Homepage({}, ref) {
             </div>
           );
         })}
+      <button
+        className={Homestyles.notifyButton}
+        onClick={() => setshowModal(true)}
+      >
+        <BellDot size={30} />
+      </button>
+      <MyVerticallyCenteredModal
+        show={showModal}
+        onHide={() => setshowModal(false)}
+      />
     </>
   );
 }
