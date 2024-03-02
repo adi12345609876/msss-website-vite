@@ -1,4 +1,7 @@
 //theme colors
+// @import "../utils/variables";@import "../utils/variables";
+// map-get($ThemeC, "BlueShades", "1")
+
 $primary: #fff;
 $ThemeC: (
   "BlueShades": (

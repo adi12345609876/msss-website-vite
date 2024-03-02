@@ -21,18 +21,40 @@
   [
     {
       "img": "images/card1.jpeg",
-      "hidheading": "Republic day",
-      "hidtext": "We had a nice republic day celebration,with our ncc and scout studets along with the yoga celebrations",
+
       "subtext": "Republic day",
       "title": "Festival"
     },
+
     {
       "img": "images/card2.jpeg",
-      "hidheading": "Cricket tournament",
-      "hidtext": "our school student won 2023 chakra cricket match representing our school,They held 4th place in it",
+
       "subtext": "victory",
-      "title": "Achievements"
+      "title": "ach"
+    },
+    {
+      "img": "images/b1.jpg",
+
+      "subtext": "subtitle",
+      "title": "title"
+    },
+    {
+      "img": "images/card2.jpeg",
+
+      "subtext": "subtitle",
+      "title": "title"
     }
   ],
-  ["images/b1.jpg", "images/b2.png"]
+  [
+    { "img": "images/b1.jpg", "linkTo": "/Admissions" },
+    {
+      "img": "images/b2.png",
+      "linkTo": "https://cubonline.biz/StudentLogin?Instname=MSSS"
+    }
+  ],
+  [
+    { "updatesText": "Payments are open now" },
+    { "updatesText": "Payments are open now" },
+    { "updatesText": "Payments are open now" }
+  ]
 ]

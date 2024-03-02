@@ -11,9 +11,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    width: 100%;
+    // max-width: 400px;
   }
   &Image {
+    // width: 100%;
     width: 100%;
+    height: auto;
     // background-color: red;
     max-height: 85dvh;
     object-fit: cover;
@@ -46,26 +51,84 @@
     font-size: 5dvw;
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
-    text-shadow: 0 0 25px #ffffff77;
+    text-shadow: 0 0 25px #ffffff47;
+
     white-space: nowrap;
     overflow: hidden;
 
     display: inline-block;
     overflow: hidden;
     width: 100%;
-    animation: typing 3s;
+    animation: typing 2.5s;
+    opacity: 1;
     // animation: revealText 1s;
   }
   /*herobutton*/
   &button {
     position: absolute;
-    bottom: 25dvh;
+    top: 80%;
+    left: 45%;
+    // transform: translate(-50%, -50%);
+    // -ms-transform: translate(-50%, -50%);
+
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
     @media (max-width: 768px) {
-      font-size: 0.75rem;
-      width: fit-content;
-      height: fit-content;
-      top: 40dvh;
+      padding: 0.5rem 0.75rem;
+      font-size: 1rem;
     }
+  }
+}
+@keyframes updatesShowanimtion {
+  from {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    padding-bottom: 0rem;
+    margin-top: 0rem;
+  }
+  to {
+    background-color: map-get($ThemeC, "GrayShades", "2");
+    padding-bottom: 5rem;
+    margin-top: 2rem;
+    width: 50%;
+    height: 50%;
+  }
+}
+
+.Updates {
+  &Text {
+    text-align: start;
+    margin-left: 2rem;
+  }
+  &Container {
+    background-color: map-get($ThemeC, "GrayShades", "2");
+    cursor: alias;
+    border-radius: 2rem;
+    // width: 50%;
+    width: 50%;
+    height: 50%;
+  }
+
+  // display: flex;
+  // flex-direction: column;
+  // align-content: center;
+  &Heading {
+    @include PrimaryTitle;
+  }
+}
+
+/*typing effect*/
+@keyframes typing {
+  from {
+    width: 0px;
+    opacity: 0;
+    text-shadow: 0;
+    font-weight: 600;
   }
 }
 /*Reveal animation*/
@@ -80,88 +143,35 @@
   }
 }
 
-/*typing effect*/
-@keyframes typing {
-  from {
-    width: 0px;
-  }
-}
 .display {
-  &div {
-    // background-color: green;
-
-    // min-width: 50dvw;
-  }
   &fullrow {
-    // background-color: yellow;
     display: flex;
-    flex-direction: row;
-    margin: 100px 100px 100px 0;
-    // background-color: yellow;
-    @media (max-width: 768px) {
-      flex-direction: column-reverse;
-    }
-  }
-  // Left side banner
-  &banner {
-    // background-color: grey;
 
-    max-width: 20%;
-    display: flex;
-    flex-direction: column;
-    margin-inline: 100px;
-
-    justify-content: space-around;
-    @media (max-width: 768px) {
-      margin-inline: auto;
-      flex-direction: row;
-      max-width: 60%;
-    }
-  }
-  &headline {
-    // background-color: #fff;
-    width: 70%;
-    display: flex;
     flex-direction: row;
-    @media (max-width: 768px) {
-      margin-left: 20%;
-    }
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    margin: 2rem;
+    align-content: center;
   }
 }
 
-.banner {
-  &Image {
-    border-radius: 0.5rem;
-    max-height: 10rem;
-    object-fit: fill;
-    // background-color: red;
-
-    @include xl {
-      max-width: 20rem;
-    }
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
-      0 3px 10px 0 rgba(0, 0, 0, 0.106);
-    // margin-bottom: 0.5rem;
-    @media (max-width: 768px) {
-      max-height: 100px;
-    }
-  }
-}
 .Card {
   &Container {
-    // background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    max-width: 20%;
+    width: fit-content;
+    height: fit-content;
+
     position: relative;
-    &:hover .CardHiddenText {
-      height: 80%;
-    }
   }
   &img {
     border-radius: 0.5rem;
+
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
       0 3px 10px 0 rgba(0, 0, 0, 0.106);
-
-    width: 100%;
-    height: auto;
   }
   &p {
     font-size: 0.875rem;
@@ -174,41 +184,6 @@
     color: white;
     display: inline-block;
     background-color: rgb(51 65 85);
-  }
-  &HiddenText {
-    display: flex;
-    flex-direction: column;
-    // justify-content: space-around;
-
-    text-align: center;
-    border-radius: 0.5rem /* 4px */;
-    color: aliceblue;
-    position: absolute;
-    width: 100%;
-    height: 0;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.75);
-    overflow: hidden;
-    transition: 0.5s ease;
-    h1 {
-      max-height: 20%;
-      width: 100%;
-      font-size: 4rem;
-      text-align: inherit;
-      margin: 10% 0 5% 0;
-      display: inline;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-    h2 {
-      text-align: inherit;
-
-      font-size: 1.25rem;
-
-      width: 100%;
-    }
   }
 }
 
@@ -235,6 +210,7 @@
     }
     &Title {
       // background-color: indigo;
+      overflow: hidden;
       font-size: 5rem;
       margin-bottom: 10px;
       font-family: Arial, Helvetica, sans-serif;
@@ -264,7 +240,5 @@
   }
   &Reverse {
     flex-direction: row-reverse;
-  }
-  &Noreverse {
   }
 }

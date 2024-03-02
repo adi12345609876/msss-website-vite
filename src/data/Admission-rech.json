@@ -1,0 +1,10 @@
+{
+  "test": {
+    "Site_key": "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI",
+    "Secret_key": "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe"
+  },
+  "build": {
+    "Site_key": "6Ldt7YYpAAAAAPkiGWFxRuZmPxOfdWma_pR6eqvb",
+    "Secret_key": "6Ldt7YYpAAAAAFc193ZBTcxs4UMYXJ0K35qOoJhU"
+  }
+}

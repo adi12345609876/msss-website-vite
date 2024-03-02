@@ -14,3 +14,8 @@ Currently, two official plugins are available:
     <!-- 2. Show text on hover over the news & show description text for the gallery photos-->
     <!-- 3. change to dynamic position relative to mobile phone too -->
   npm i react-router-dom@6.22.0
+
+# Install
+
+npm install @mui/material @emotion/react @emotion/styled
+npm install --save react-google-recaptcha

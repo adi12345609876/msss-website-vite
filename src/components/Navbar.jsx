@@ -1,10 +1,9 @@
-import React, { useState, useRef, forwardRef } from "react";
+import React, { useState, forwardRef } from "react";
 import { Navbar, Nav, Container, Image } from "react-bootstrap";
-import { Link, Routes, Route, useLocation } from "react-router-dom";
-import Homepage from "../pages/Homepage";
-import Gallerypage from "../pages/Gallerypage";
+import { Link, useLocation } from "react-router-dom";
 import NavbarStyles from "../styles/modules/Navbar.module.scss";
 import schoollogo from "../assets/img/logo.png";
+import NavDropdown from "react-bootstrap/NavDropdown";
 // import { news, aboutus, mission } from "../components/Globalcomp";
 
 // import "../styles/css/Navbar.css";
@@ -59,6 +58,11 @@ function AppNavbar({}, ref) {
               <Link to="/Contact" className={NavbarStyles.link}>
                 Contact us
               </Link>
+              <NavDropdown title="Others" id="basic-nav-dropdown">
+                <NavDropdown.Item href="/FeeStructure">
+                  Fee Structure
+                </NavDropdown.Item>
+              </NavDropdown>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -74,7 +78,7 @@ function AppNavbar({}, ref) {
                 className={`${NavbarStyles.linkSub}`}
                 onClick={() => ScrollToSelection(ref[0])}
               >
-                News
+                Infrasture
               </Link>
               <Link
                 to="/"
@@ -84,13 +88,13 @@ function AppNavbar({}, ref) {
                 About us
               </Link>
               {/* The 2ns section */}
-              <Link
+              {/* <Link
                 to="/"
                 className={`${NavbarStyles.linkSub}`}
                 onClick={() => ScrollToSelection(ref[1])}
               >
                 Infrasture
-              </Link>
+              </Link> */}
             </Nav>
           </div>
         )}

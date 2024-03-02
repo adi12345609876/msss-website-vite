@@ -5,6 +5,22 @@
     padding: 30dvh 0;
   }
   &File {
-    max-width: fit-content;
+    width: 60dvw;
+    height: fit-content;
+    // max-width: fit-content;
+  }
+}
+.display {
+  &Container {
+    // background-color: red;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100dvw;
+    justify-content: space-around;
+  }
+  &CardContainer {
+    // background-color: pink;
+    // max-width: 1rem;
+    margin: 1.25rem;
   }
 }

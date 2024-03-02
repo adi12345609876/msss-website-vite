@@ -11,6 +11,7 @@ import AppFooter from "../src/components/Footer";
 import Contactpage from "./pages/Contactpage";
 import AdmissionPage from "./pages/AdmissionPage";
 import "./styles/index.css";
+import FeeStructure from "./pages/FeeStructure";
 function App() {
   const news = useRef(null);
   const aboutus = useRef(null);
@@ -27,6 +28,7 @@ function App() {
           {/* <Route path="/Payments" /> */}
           <Route path="/Admissions" element={<AdmissionPage />} />
           <Route path="/Contact" element={<Contactpage />} />
+          <Route path="/FeeStructure" element={<FeeStructure />} />
         </Routes>
       </div>
       {/* Footer */}

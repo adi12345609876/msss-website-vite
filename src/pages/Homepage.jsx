@@ -5,30 +5,17 @@ import heroimg from "../assets/img/hero.jpeg";
 import Card from "../components/card";
 import Homestyles from "../styles/modules/Homepage.module.scss";
 
-import ContentData from "../data/Home-ContentBloack";
+import ContentData from "../data/Home-ContentBloack.json";
+import { useNavigate } from "react-router-dom";
 
 // import { news, aboutus, mission } from "../components/Globalcomp";
-function Bannerimg(props) {
-  return (
-    <div>
-      <Image
-        src={props.img}
-        alt="banner image"
-        className={`${Homestyles.bannerImage}`}
-      />
-    </div>
-  );
-}
+
 function Imageblock(props) {
   return (
     <div className={Homestyles.CardContainer}>
       <Card title={props.title}>
-        <Image src={props.img} className={Homestyles.Cardimg} />
+        <img src={props.img} className={Homestyles.Cardimg} />
         <p className={Homestyles.Cardp}>{props.text}</p>
-        <div className={Homestyles.CardHiddenText}>
-          <h1>{props.hidheading}</h1>
-          <h2>{props.hidtext}</h2>
-        </div>
       </Card>
     </div>
   );
@@ -95,37 +82,39 @@ function Homepage({}, ref) {
           Enroll Now
         </Button>
       </div>
+
       {/*Display section */}
-      <div className={Homestyles.displaydiv} ref={ref[0]}>
-        <div className={Homestyles.displayfullrow}>
-          {/* Left side banner */}
-          <div className={`${Homestyles.displaybanner}`}>
-            {ContentData &&
-              ContentData[2].map((img) => {
-                return <Bannerimg img={img} />;
-              })}
-          </div>
-          {/* right side banner */}
 
-          <div className={`${Homestyles.displayheadline}`}>
-            {ContentData &&
-              ContentData[1].map((item) => {
-                return (
-                  <div className="m-2">
-                    <Imageblock
-                      img={item.img}
-                      title={item.title}
-                      text={item.subtext}
-                      hidheading={item.hidheading}
-                      hidtext={item.hidtext}
-                    />
-                  </div>
-                );
-              })}
-          </div>
-        </div>
+      <div className={Homestyles.displayfullrow} ref={ref[0]}>
+        {ContentData &&
+          ContentData[1].map((item) => {
+            return (
+              <Imageblock
+                img={item.img}
+                title={item.title}
+                text={item.subtext}
+                hidheading={item.hidheading}
+                hidtext={item.hidtext}
+              />
+            );
+          })}
       </div>
-
+      {/* Updates */}
+      {/* <div className="flex items-center justify-center">
+        <div className={Homestyles.UpdatesContainer}>
+          <h1 className={Homestyles.UpdatesHeading}>Updates</h1>
+          {ContentData &&
+            ContentData[3].map((item, index) => {
+              return (
+                <div>
+                  <p className={Homestyles.UpdatesText}>
+                    {index + 1}.{item.updatesText}
+                  </p>
+                </div>
+              );
+            })}
+        </div>
+      </div> */}
       {/* Content section */}
 
       {ContentData &&

@@ -2,11 +2,15 @@
 
 .card {
   // background-color: blue;
+  // max-width: 40%;
   margin: 1.25rem 0.5rem 1.25rem 0;
   display: inline-block;
+  width: fit-content;
+  height: fit-content;
   &Title {
     // background-color: purple;
     margin-bottom: 0.5rem;
+    display: block;
 
     font-weight: 500;
     font-size: 1.75rem;
