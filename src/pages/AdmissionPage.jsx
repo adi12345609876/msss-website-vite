@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "../styles/modules/admission.scss";
 import ReCAPTCHA from "react-google-recaptcha";
-import Admission_rech from "../data/Admission-rech.json";
+import Admission_rech from "../../public/data/Admission-rech.json";
 function AdmissionPage() {
-  const open = true;
+  const open = Admission_rech.Page_open;
+  const rechaptchaTestMode = Admission_rech.Page_open;
   const defaultData = {
     child: {
       stu_name: "",
@@ -27,7 +28,6 @@ function AdmissionPage() {
   };
   const [formData, setformData] = useState(defaultData);
   const [botVerified, setbotVerified] = useState(false);
-  const rechaptchaTestMode = true;
   function OnHandleChange(event, parentName) {
     console.log(event.target);
     const singleChild = {

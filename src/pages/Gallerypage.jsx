@@ -2,7 +2,7 @@
 import React from "react";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/scss/image-gallery.scss";
-import GalleryData from "../data/Gallery-ContentBloack.json";
+import GalleryData from "../../public/data/Gallery-ContentBloack.json";
 import GalleryStyles from "../styles/modules/Gallerypage.module.scss";
 import Card from "react-bootstrap/Card";
 import CenterModal from "../components/ImageModal";

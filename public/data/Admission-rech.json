@@ -1,4 +1,6 @@
 {
+  "Page_open": false,
+  "rechaptchaTestMode": true,
   "test": {
     "Site_key": "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI",
     "Secret_key": "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe"

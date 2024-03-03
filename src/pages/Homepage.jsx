@@ -5,7 +5,7 @@ import heroimg from "../assets/img/hero.jpeg";
 import Card from "../components/card";
 import Homestyles from "../styles/modules/Homepage.module.scss";
 
-import ContentData from "../data/Home-ContentBloack.json";
+import ContentData from "../../public/data/Home-ContentBloack.json";
 import { BellDot } from "lucide-react";
 
 // import { news, aboutus, mission } from "../components/Globalcomp";

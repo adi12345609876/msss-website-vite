@@ -1,6 +1,6 @@
 import * as React from "react";
 import TableComp from "../components/Table";
-import FeeContent from "../data/FeeTable-ContentBloack.json";
+import FeeContent from "../../public/data/FeeTable-ContentBloack.json";
 
 export default function CustomizedTables() {
   const results = [];
